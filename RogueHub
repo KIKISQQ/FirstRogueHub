@@ -24,7 +24,6 @@ Name = "Teleport"
 FarmingSection:AddButton({
 Name = "Attach To Back (Press X)",
 Callback = function()
-Callback = function()
 pcall(function()
    local UIS = game:GetService("UserInputService")
    local Player = game:GetService("Players").LocalPlayer
