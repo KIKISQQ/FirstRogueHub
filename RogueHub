@@ -126,12 +126,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)
 end
 })
-TPSection:AddButton({
-Name = "TP To Criminal Base",
-Callback = function()
-local TS = game:GetService("TweenService")
-local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1), {CFrame = CFrame.new(-943, 94, 2056)})
-local Player = game.Players.LocalPlayer
-	tween:Play()
-end
-})
+
