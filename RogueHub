@@ -20,7 +20,74 @@ Name = "Player"
 local TPSection = TPTab:CreateSection({
 Name = "Teleport"
 })
-
+FarmingSection:AddButton({
+Name = "Check For Mods In Server",
+Callback = function()
+    task.spawn(function()
+local staff = {
+    "Gimmie1Sec",
+    "AshiinOni7",
+    "HappyGaiaPlayer",
+    "triojins",
+    "Xyle_ex",
+    "noihateyoudnc",
+    "kanekabluex",
+    "TIGRECOSMICOLOL232",
+    "JustQwelty",
+    "JakeVikeFan",
+    "InternettPersonas",
+    "DopTransformers123",
+    "KariiValkyrie",
+    "stayforlife",
+    "Dawnastasia",
+    "vixvxxv",
+    "ghyjkljklk",
+    "Qxilo",
+    "bfzers",
+    "Robloxdudexd56",
+    "ZenithsEclipse",
+    "LegendarioDivinity",
+    "Shurriversal",
+    "HadesDHades",
+    "0ct0pio",
+    "sergentRamndo",
+    "draconiandash",
+    "FatherSaySmoke",
+    "Water_Elemental919",
+    "wofieink",
+    "gimme_dzln",
+    "Jeain_Doe",
+    "dodoalts3",
+    "dodoalts2",
+    "snowballemulate",
+    "SukiFade",
+    "Lord_Kalzone",
+    "BaldHeadGood",
+    "IndustrialBldr",
+    "1stokeley",
+    "DestroyRuin",
+    "tx8ekiii",
+    "punchgodvize",
+    "LiterallGalaxy",
+    "Regisaqt",
+    "NilsberCZ",
+    "b4ncck",
+    "Scendedee",
+    "trashg_ame"
+}
+            
+    while task.wait(5) do
+        table.foreach(staff,function(a,b)
+            for _,v in pairs(game:GetService("Players"):GetChildren()) do
+                if v.Name == b then
+                    game.Players.LocalPlayer:Kick("Moderator(Nerd) Detected")
+                end
+            end
+        end)
+    end
+end)
+end
+})
 FarmingSection:AddButton({
 Name = "Attach To Back (Press X)",
 Callback = function()
@@ -37,7 +104,7 @@ pcall(function()
                t2 = true
                if (Player.Character.Head.Position - target.Parent.Head.Position).Magnitude < 100  and t2 then
                    while wait() do
-                       Player.Character.HumanoidRootPart.CFrame = target.Parent.HumanoidRootPart.CFrame * CFrame.new(0,0,4)
+                       Player.Character.HumanoidRootPart.CFrame = target.Parent.HumanoidRootPart.CFrame * CFrame.new(0,0,3)
                        if t2 == false then
                            break
                        end
@@ -53,10 +120,10 @@ end)
 end
 })
 FarmingSection:AddButton({
-Name = "No Fall+",
+Name = "No Fall",
 Callback = function()
 while wait(5) do
-game:GetService("Players").LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
 end
 end
 })
